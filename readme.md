@@ -100,39 +100,29 @@ This project is provided for:
 
 ## Here is how to set up the standalone compiler and FreeGLUT.
 
-1. Download the Standalone Compiler (WinLibs)
+## Download the Standalone Compiler (WinLibs)
 
-Go to WinLibs.com.
+1. Go to WinLibs.com.
+2. Scroll down to the "Release" section.
+3. Look for UCRT runtime, Win64, and download the Zip archive (e.g., "GCC 14.2.0 + LLVM/Clang...").
+4. Extract it: Unzip the folder to a simple location like C:\mingw64.
 
-Scroll down to the "Release" section.
+## Add to Environment Variables
 
-Look for UCRT runtime, Win64, and download the Zip archive (e.g., "GCC 14.2.0 + LLVM/Clang...").
+1. Windows needs to know where g++.exe lives.
+2. Open the Start Menu, type "Environment Variables", and select Edit the system environment variables.
+3. Click Environment Variables > Select Path > Click Edit.
+4. Click New and paste: C:\mingw64\bin
+5. Click OK on all windows.
 
-Extract it: Unzip the folder to a simple location like C:\mingw64.
 
-2. Add to Environment Variables
+## Download & Place FreeGLUT
 
-Windows needs to know where g++.exe lives.
-
-Open the Start Menu, type "Environment Variables", and select Edit the system environment variables.
-
-Click Environment Variables > Select Path > Click Edit.
-
-Click New and paste: C:\mingw64\bin
-
-Click OK on all windows.
-
-3. Download & Place FreeGLUT
-
-Since you are doing a manual setup, let's put FreeGLUT directly into your compiler folders so you don't have to keep copying files into every new project.
-
-Download the freeglut 3.0.0 MSVC Package from Transmission Zero.
-
-Move Headers: Copy everything inside the zip's include/GL folder into C:\mingw64\include\GL.
-
-Move Libraries: Copy the .lib files from the zip's lib/x64 folder into C:\mingw64\lib.
-
-Move the DLL: Copy freeglut.dll from the zip's bin/x64 folder into C:\Windows\System32 (this allows any OpenGL program you write to run globally).
+1. Since you are doing a manual setup, let's put FreeGLUT directly into your compiler folders so you don't have to keep copying files into every new project.
+2. Download the freeglut 3.0.0 MSVC Package from Transmission Zero.
+3. Move Headers: Copy everything inside the zip's include/GL folder into C:\mingw64\include\GL.
+4. Move Libraries: Copy the .lib files from the zip's lib/x64 folder into C:\mingw64\lib.
+5. Move the DLL: Copy freeglut.dll from the zip's bin/x64 folder into C:\Windows\System32 (this allows any OpenGL program you write to run globally).
 
 ## Download Link(GCC + MinGW)
 

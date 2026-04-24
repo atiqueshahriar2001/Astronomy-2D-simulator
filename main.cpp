@@ -226,7 +226,7 @@ void drawPolygonOutline(const std::vector<Point2D>& points, bool useDDA) {
 }
 
 void drawFilledPolygon(const std::vector<Point2D>& points) {
-    glBegin(GL_QUADS);
+    glBegin(GL_POLYGON);
     for (const Point2D& point : points) {
         glVertex2f(point.x, point.y);
     }
@@ -239,7 +239,7 @@ void drawRoundedPolygonBlob(float centerX, float centerY,
                             float angleOffset = 0.0f) {
     const int segments = 28;
     glColor4f(r, g, b, alpha);
-    glBegin(GL_QUADS);
+    glBegin(GL_POLYGON);
     for (int i = 0; i < segments; ++i) {
         float angle = angleOffset + (2.0f * PI * static_cast<float>(i)) / static_cast<float>(segments);
         float wave = 0.88f + 0.14f * std::sin(angle * 3.0f + angleOffset * 1.7f)
